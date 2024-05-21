@@ -1,0 +1,23 @@
+[package]
+name = "qtpy_rust"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your@email.com>"]
+description = "QtPy IDE rewritten in Rust"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+qt_widgets = "0.5"
+qt_core = "0.5"
+
+[build-dependencies]
+qt5qml = "0.5"
+
+[profile.dev]
+panic = "abort"  # Enable abort-on-panic for faster debugging
+
+[profile.release]
+panic = "abort"  # Enable abort-on-panic for safer releases
+
+[features]
+default = ["qt_widgets", "qt_core"]
